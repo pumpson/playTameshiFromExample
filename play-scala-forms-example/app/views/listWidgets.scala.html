@@ -9,6 +9,11 @@
       <div>@name: @value</div>
     }
 
+    @* こっちでもflashingのデータを取得できる *@
+    @request.flash.get("info").map { message =>
+    <p class="success">@message</p>
+    }
+
     <table>
       <thead>
         <tr><th>Name</th><th>Price</th>
