@@ -66,6 +66,7 @@ class WidgetController @Inject()(cc: MessagesControllerComponents) extends Messa
     }
 
     // フォームのバリデーション結果を取得
+    // memo:bindFromRequestはリクエストからフォームデータを取得し、Formのデータクラスへバインドします
     val formValidationResult = form.bindFromRequest()
     // バリデーション結果に基づいて適切な関数を呼び出す
     formValidationResult.fold(errorFunction, successFunction)
